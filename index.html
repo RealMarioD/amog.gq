@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8">
-  <title>ඞ W. I. P.</title>
+  <title>ඞ  W. I. P.</title>
   
   <meta property="og:url" content="https://amog.gq/"> 
 <!-- Opengraph title url. -->
@@ -28,13 +28,33 @@
 
 <meta content="#ff0000" data-react-helmet="true" name="theme-color">
 <!-- Opengraph embed color. -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet"> 
+<!-- Iceland font. -->
 </head>
 
 <body>
 <div class="outer-wrapper">
       <div class="wrapper">
-        <div valign="middle" class="slide">
-          <h1 align="center" class="bigsus">ඞ</h1>
+        <div style="cursor: pointer;" onclick="copyfunction()" class="slide">
+		  <div class="welcomediv">
+		  <p class="welcometext">Welcome!</p>
+		  <hr width="75%" style="margin: 0px; padding: 0px; border: 2px solid red;">
+		  </div>
+          <p class="bigsus">ඞ</p>
+		  <p class="lefttext">Click to copy<br>to clipboard!</p>
+		  <p class="righttext">Scroll<br>to advance.</p>
+		  <script>
+		  function copyfunction() {
+   /* Copy amogus */
+navigator.clipboard.writeText("ඞ");
+  
+  /* Alert amogus */
+alert("Duplicated the amogus into your clipboard!");
+} 
+		  </script>
         </div>
         <div class="slide"></div>
         <div class="slide"></div>
@@ -46,25 +66,80 @@
 </html>
 
 <style>
+.welcometext {
+position: relative;
+font-family: Monospace;
+color: red;
+margin: 0;
+padding: 0;
+font-size: 5vmax;
+z-index: 2;
+}
+.welcomediv {
+  position: absolute;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+}
+
+.lefttext {
+  font-family: iceland;
+  position: absolute;
+  color: red;
+  /*transform: rotate(90deg);*/
+  top: 50vh;
+  left: 1vw;
+  font-size: 10vmin;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  mix-blend-mode: difference;
+}
+.righttext {
+  font-family: iceland;
+  position: absolute;
+  color: red;
+  /*transform: rotate(90deg);*/
+  top: 50vh;
+  right: 301vw;
+  font-size: 10vmin;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  mix-blend-mode: difference;
+}
 body {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 .slide {
+  scroll-snap-align: start;
+  display: table-cell;
   width: 100vw;
   height: 100vh;
-  background-color: black;
-  scroll-snap-align: start;
+  vertical-align: middle;
+  background-color: transparent;
+  
+  margin: 0;
+  padding: 0;
 }
 .wrapper {
-  scroll-snap-type: mandatory;
-  display: flex;
+  display: table;
+  scroll-snap-type: y mandatory;
   flex-direction: row;
   width: 400vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
+  
+  margin: 0;
+  padding: 0;
 }
 .outer-wrapper {
+  scroll-snap-type: y mandatory;
+  margin: 0;
+  padding: 0;
   width: 100vh;
   height: 100vw;
   transform: rotate(-90deg) translateX(-100vh);
@@ -80,5 +155,8 @@ body {
 }
 .bigsus {
   color: red;
-  font-size: 100vmin;
-</style
+  font-size: 90vmin;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+</style>
