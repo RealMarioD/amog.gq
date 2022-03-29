@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <title>ඞ  W. I. P.</title>
   
   <meta property="og:url" content="https://amog.gq/"> 
@@ -38,7 +38,7 @@
 <body>
 <div class="outer-wrapper">
       <div class="wrapper">
-        <div style="cursor: pointer;" onclick="copyfunction()" class="slide">
+        <div style="cursor: pointer;" onclick="copyfunction()" class="slidecenter">
 		  <div class="welcomediv">
 		  <p class="welcometext">Welcome!</p>
 		  <hr width="75%" style="margin: 0px; padding: 0px; border: 2px solid red;">
@@ -56,9 +56,36 @@ alert("Duplicated the amogus into your clipboard!");
 } 
 		  </script>
         </div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
+        <div onload="" class="slide"><p class="typed" id="typeit"></p>
+		<script>
+var p = document.getElementById('typeit');
+p.innerHTML = '';
+var n = 0;
+var str = 'Index.Amogus<br><br>_______________________________________<br>Actual stuff:<br><br>AmogOS: <a href="https://amogos.studio/">https://amogos.studio/</a><br>-An actual operating system for the raspbpi.<br><br>AmongR: <a href="https://amongr.hu/">https://amongr.hu/</a><br>-An actual hungarian vitamine drink.<br><br>Amogus.com: <a href="http://amogus.com/">http://amogus.com/</a><br>-An actual company idk, but their name is funny and they use php.<br><br>Among Us (programming language): <a href="https://esolangs.org/wiki/Among_Us">https://esolangs.org/wiki/Among_Us</a><br>-An actual programming language that looks like the text chat in Among Us.<br>________________________________________<br><br>Shitposts:<br><br>Ocusus.com: <a href="https://ocusus.com/">https://ocusus.com/</a><br>-amogus in the metaverse<br><br>Amogus.org: <a href="https://amogus.org/">https://amogus.org/</a><br>-i dont even know, just found it on google<br>_______________________________________<br>If you know more, please tell me because this is all i that i know of.<br> ';
+var typeTimer = setInterval(function() {
+  n = n + 1;
+  p.innerHTML = " " + str.slice(0, n);
+  if (n === str.length) {
+    clearInterval(typeTimer);
+    p.innerHTML = " " + str;
+    n = 0;
+    setInterval(function() {
+
+      if (n === 0) {
+        p.innerHTML = " " + str + "█"
+        n = 1;
+      } else {
+        p.innerHTML = " " + str
+        n = 0;
+      };
+    }, 500);
+  };
+}, 5)
+
+		</script>
+		</div>
+        <div class="slide"><p class="typed">Work in progress</p></div>
+        <div class="slide"><a class="github" href="https://github.com/Lenr0k/amog.gq">If you want to add something, tell me on the github</a></div>
       </div>
     </div>
 </body>
@@ -66,6 +93,22 @@ alert("Duplicated the amogus into your clipboard!");
 </html>
 
 <style>
+.github {
+color: red;
+font-size: 15vmin;
+font-family: Monospace;
+}
+
+a {
+color: red;
+}
+
+.typed {
+color: white;
+font-size: 1.2rem;
+margin: 20px;
+}
+
 .welcometext {
 position: relative;
 font-family: Monospace;
@@ -114,13 +157,25 @@ body {
   padding: 0;
   background-color: black;
 }
-.slide {
+.slidecenter {
   scroll-snap-align: start;
   display: table-cell;
   width: 100vw;
   height: 100vh;
   vertical-align: middle;
   background-color: transparent;
+  
+  margin: 0;
+  padding: 0;
+}
+.slide{
+  scroll-snap-align: start;
+  display: table-cell;
+  width: 100vw;
+  height: 100vh;
+  vertical-align: top;
+  background-color: transparent;
+  
   margin: 0;
   padding: 0;
 }
@@ -131,6 +186,7 @@ body {
   width: 400vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
+  
   margin: 0;
   padding: 0;
 }
